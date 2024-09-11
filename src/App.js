@@ -1,22 +1,15 @@
 import './App.css';
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="App-banner-container">
-          <img src={'/rolls.jpg'} className="App-banner" alt="banner" />
-        </div>
-        <p>
-          Butler Family Recipes
-        </p>
-      </header>
+      <Header />
       <body className="App-body">
         <p>Hi</p>
       </body>
-      <footer className="App-footer">
-        <p>le foot</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
