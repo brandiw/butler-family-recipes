@@ -8,20 +8,29 @@ import Main from './components/pages/Main'
 import New from './components/pages/New'
 
 // Libraries / Tools
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <body className="App-body">
-        <p>Hi</p>
+
         <BrowserRouter>
+          <div className="Nav-bar">
+            <Link to="/">Main</Link>
+            <Link to ="/new">New</Link>
+            <Link to ="/blog">Blog</Link>
+          </div>
           <Routes>
             <Route index element={<Main />} />
             <Route path="new" element={<New />} />
+            <Route path="blog" element={<New />} />
           </Routes>
         </BrowserRouter>
+        <div className="App-main">
+          <p>Hi</p>
+        </div>
       </body>
       <Footer />
     </div>
